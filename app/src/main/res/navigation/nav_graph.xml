@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.homework3.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_task1"
+            app:destination="@id/task1" />
+        <action
+            android:id="@+id/action_mainFragment_to_task2"
+            app:destination="@id/task2" />
+    </fragment>
+    <fragment
+        android:id="@+id/task1"
+        android:name="com.example.homework3.Task1"
+        android:label="fragment_task1"
+        tools:layout="@layout/fragment_task1" />
+    <fragment
+        android:id="@+id/task2"
+        android:name="com.example.homework3.Task2"
+        android:label="fragment_task2"
+        tools:layout="@layout/fragment_task2" />
+</navigation>

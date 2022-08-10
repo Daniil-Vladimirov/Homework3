@@ -1,16 +1,24 @@
 package com.example.homework3
 
+import android.app.Activity
+import android.content.Context
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.WindowManager
+import android.view.inputmethod.EditorInfo
+import android.view.inputmethod.InputMethodManager
+import android.view.inputmethod.InputMethodManager.*
 import android.widget.ImageView
+import androidx.core.content.ContextCompat.getSystemService
+import androidx.fragment.app.Fragment
 import com.example.homework3.databinding.FragmentTask2Binding
+import com.example.homework3.util.hideKeyboard
 import java.util.concurrent.ExecutorService
 import java.util.concurrent.Executors
 
@@ -32,14 +40,26 @@ class Task2 : Fragment() {
         _binding = FragmentTask2Binding.inflate(inflater, container, false)
         val imageView = binding.imageSearched
 
+        binding.edTextLink.setOnEditorActionListener { _, actionId, _ ->
+            if (actionId == EditorInfo.IME_ACTION_DONE) {
+                searchImage(imageView)
+                hideKeyboard()
+                return@setOnEditorActionListener true
+
+            }
+            false
+        }
+
         binding.btnSearch.setOnClickListener {
             searchImage(imageView)
+            hideKeyboard()
         }
         return binding.root
     }
 
     private fun searchImage(imageView: ImageView) {
         executor.execute {
+
             val link = binding.edTextLink.text.toString()
             try {
                 val `in` = java.net.URL(link).openStream()

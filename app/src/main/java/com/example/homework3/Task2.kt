@@ -1,7 +1,5 @@
 package com.example.homework3
 
-import android.app.Activity
-import android.content.Context
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.os.Bundle
@@ -10,12 +8,9 @@ import android.os.Looper
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.view.WindowManager
 import android.view.inputmethod.EditorInfo
-import android.view.inputmethod.InputMethodManager
-import android.view.inputmethod.InputMethodManager.*
 import android.widget.ImageView
-import androidx.core.content.ContextCompat.getSystemService
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.example.homework3.databinding.FragmentTask2Binding
 import com.example.homework3.util.hideKeyboard
@@ -70,10 +65,13 @@ class Task2 : Fragment() {
                 }
             }
 
-            // If the URL doesnot point to
+            // If the URL does not point to
             // image or any other kind of failure
             catch (e: Exception) {
                 e.printStackTrace()
+                requireActivity().runOnUiThread {
+                    Toast.makeText(activity, "Something went wrong ): ", Toast.LENGTH_LONG).show()
+                }
             }
         }
     }

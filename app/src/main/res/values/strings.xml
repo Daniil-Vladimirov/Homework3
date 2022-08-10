@@ -7,4 +7,5 @@
     <string name="text_please_insert_a_link">Please insert a link</string>
     <string name="text_hint_paste_your_link_here">paste your link here</string>
     <string name="btn_search">search</string>
+    <string name="image_view_found_image">Found image</string>
 </resources>

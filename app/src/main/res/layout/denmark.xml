@@ -4,6 +4,7 @@
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
     tools:showIn="@layout/fragment_task1"
+    android:contentDescription="@string/denmark"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <FrameLayout

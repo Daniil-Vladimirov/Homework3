@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:showIn="@layout/fragment_task1"
     android:layout_width="match_parent"
+    android:contentDescription="@string/poland"
     android:layout_height="match_parent"
     android:orientation="vertical">
 

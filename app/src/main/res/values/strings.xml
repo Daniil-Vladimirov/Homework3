@@ -8,4 +8,13 @@
     <string name="text_hint_paste_your_link_here">paste your link here</string>
     <string name="btn_search">search</string>
     <string name="image_view_found_image">Found image</string>
+    <string name="austria">Austria</string>
+    <string name="columbia">Columbia</string>
+    <string name="denmark">Denmark</string>
+    <string name="italy">Italy</string>
+    <string name="madagascar">Madagascar</string>
+    <string name="poland">Poland</string>
+    <string name="make_russia_great_again">MAKE RUSSIA GREAT AGAIN!</string>
+    <string name="switzerland">Switzerland</string>
+    <string name="thailand">Thailand</string>
 </resources>
